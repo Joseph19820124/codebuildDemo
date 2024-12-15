@@ -1,9 +1,10 @@
 version: 0.2
 
 phases:
-  pre_build:
+  install:
     runtime-versions:
       java: corretto21
+  pre_build:
     commands:
       - mvn clean install
       - echo Logging in to Amazon ECR...
