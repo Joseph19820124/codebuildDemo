@@ -1,13 +1,13 @@
-package com.nike.codebuildDemo;
+package com.nike.codebuilddemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CodebuildDemoApplication {
+public class CodebuilddemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CodebuildDemoApplication.class, args);
+		SpringApplication.run(CodebuilddemoApplication.class, args);
 	}
- 
+
 }
