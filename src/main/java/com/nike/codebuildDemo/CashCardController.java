@@ -1,6 +1,5 @@
 package com.nike.codebuildDemo;
 
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,9 +16,7 @@ class CashCardController {
 
     @GetMapping("/{requestedId}")
     public ResponseEntity<CashCard> getCashCard(@PathVariable Long requestedId) {
-        System.out.println(requestedId);
-        Optional<CashCard> cashCardOptional = cashCardRepository.findById(requestedId);
-        return cashCardOptional.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        return cashCardRepository.findById(requestedId).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
 }
